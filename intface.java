@@ -1,7 +1,7 @@
 public class intface {
     public static void main(String[] args) {
         Computer newLaptop = new Laptop();
-        Computer desk  = new Desktop();
+        // Computer desk  = new Desktop();
 
         Dev x = new Dev();
         x.devApp(newLaptop);
