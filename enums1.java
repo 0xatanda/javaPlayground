@@ -1,6 +1,6 @@
 public class enums1 {
     public static void main(String[] args) {
-        Status s = Status.Pending;
+        Status s = Status.Success;
 
 
         switch (s) {
