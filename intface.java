@@ -1,6 +1,7 @@
 public class intface {
     public static void main(String[] args) {
-        Laptop newLaptop = new Laptop();
+        Computer newLaptop = new Laptop();
+        Computer desk  = new Desktop();
 
         Dev x = new Dev();
         x.devApp(newLaptop);
@@ -10,20 +11,25 @@ public class intface {
 }
 
 
-class Dev {
-    public void devApp(Laptop lap) {
-        lap.code();
-    }
+interface Computer {
+    void code();
 }
 
-class Laptop {
+
+class Laptop implements Computer {
     public void code() {
         System.out.println("code, compile, run.......");
     }
 }
 
-class Desktop {
-    public void fast() {
+class Desktop implements Computer {
+    public void code() {
         System.out.println("faster .......");
+    }
+}
+
+class Dev {
+    public void devApp(Computer lap) {
+        lap.code();
     }
 }
